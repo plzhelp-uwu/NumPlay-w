@@ -580,6 +580,7 @@ void game_frame(uint32_t keys) {
       for (int i = 0; i < B.nplants; i++) left |= B.plants[i].health > 0;
       if (!left) {
         B.tutorial = 0, B.nplants = 0, hud.shovel = false;
+        B.started = 1;
         say(2410, TA_BOWL);
       }
       break;
